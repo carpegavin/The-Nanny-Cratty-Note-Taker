@@ -23,7 +23,8 @@ app.use(express.json());
 // Basic route that sends the user first to the AJAX Page
 
 app.get("/", function(req, res) {
-  res.send("Proof of concept of storing data");
+  // res.send("Proof of concept of storing data");
+  res.sendFile(path.join(__dirname, '/public/notes.html'));
 });
 
 app.get("/note", function(req, res) {
@@ -35,6 +36,11 @@ app.post("/note", function(req, res) {
   if(!req.body.title) {
     return res.json({error: "Missing required title"});
   }
+
+// edit a single note
+// delete a single note
+// app.delete('/note/'), function(req, res)
+
 
   // Copy request body and generate ID
   const note = {...req.body, id: uuidv4()}
