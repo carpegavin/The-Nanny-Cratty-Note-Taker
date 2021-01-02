@@ -18,24 +18,42 @@ app.use(express.json());
 
 
 // Routes
-// =============================================================
+// ==============================================
 
-// Basic route that sends the user first to the AJAX Page
-
-app.get("/", function(req, res) {
-  // res.send("Proof of concept of storing data");
-  res.sendFile(path.join(__dirname, '/public/notes.html'));
+//------------------HTML-----------------------------------
+app.get('/notes', function(req, res) {
+  res.sendFile(path.join(__dirname, './public/notes.html'));
 });
 
-app.get("/note", function(req, res) {
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+
+app.post('/notes', function(req, res) {
+  res.sendFile(path.join(__dirname, './public/notes.html'));
+});
+
+//----GET from db.json------------------------------
+app.get('/api/notes', function(req, res) {
   res.json(dbJSON);
 });
 
-app.post("/note", function(req, res) {
-  // Validate request body
+//------if no title------------------------
+app.post('/note', function(req, res) {
   if(!req.body.title) {
     return res.json({error: "Missing required title"});
   }
+
+//-----------post api note------------------------
+app.post('api/notes', function(req, res){
+  res.sendFile(path.join(__dirname, './db.json'))
+})
+
+//--------------delete note-----------------------
+app.delete('api/notes/:id', function(req, res) {
+  //----??????????????????
+})
 
 // edit a single note
 // delete a single note

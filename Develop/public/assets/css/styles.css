@@ -20,6 +20,8 @@ html, body {
   width: 100%;
   outline: none;
   border: none;
+  padding: 10rem;
+  margin-right: 25rem;
 }
 
 .note-textarea {
