@@ -1,4 +1,4 @@
-# The-Nanny-Cratty-Note-Taker
+# The Nanny Cratty Note Taker
 
 ## Description
 
