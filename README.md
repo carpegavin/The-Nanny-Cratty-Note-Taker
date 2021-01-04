@@ -7,7 +7,7 @@ This is a note-taking app where a user can create, save, retrieve, and delete no
 Created by using an express backend and storing and retrieving notes from a JSON file.
 
 This app is deployed on Heroku here:
-https://the-nanny-cratty-note-taker.herokuapp.com/notes
+https://the-nanny-cratty-note-taker.herokuapp.com/
 
 ### GNU License
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
