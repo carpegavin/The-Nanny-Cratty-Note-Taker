@@ -1,8 +1,29 @@
+
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: rgb(172, 243, 248);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }
+
+
 
 .save-note {
   display: none;
@@ -20,6 +41,7 @@ html, body {
   width: 100%;
   outline: none;
   border: none;
+  background-color: rgb(243, 243, 201);
 }
 
 .note-textarea {
@@ -35,7 +57,7 @@ html, body {
 }
 
 .note-title:read-only, .note-textarea:read-only {
-  color: #757575;
+  color: #aa0f0f;
 }
 
 .list-container .card {
@@ -67,4 +89,18 @@ html, body {
   border-right: none;
   padding: 20px;
   cursor: pointer;
+  background-color: yellow;
+}
+
+.display-4 {
+  background-color: yellow;
+  border: 1px solid black;
+  font-style: bold;
+  border-radius: 15px;
+}
+
+.jumbotron {
+  background-color: rgb(250, 142, 79);
+  border-radius: 15px;
+  background: opacity(255);
 }
