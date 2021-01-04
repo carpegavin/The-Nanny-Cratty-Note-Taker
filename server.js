@@ -1,17 +1,15 @@
-// Dependencies
-// =============================================================
+
 const express = require("express");
 const { v4: uuidv4 } = require('uuid');
 const fs = require("fs");
 const dbJSON = require("./db.json");
 const path = require("path");
 
-// Sets up the Express App
-// =============================================================
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Sets up the Express app to handle data parsing
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -21,14 +19,13 @@ app.use(express.json());
 // ==============================================
 
 //------------------HTML-----------------------------------
-app.get('/notes', function(req, res) {
-  res.sendFile(path.join(__dirname, './public/notes.html'));
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '../Develop/public/index.html'));
 });
 
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, './public/index.html'));
+  res.sendFile(path.join(__dirname, '../Develop/public/index.html'));
 });
-
 
 app.post('/notes', function(req, res) {
   res.sendFile(path.join(__dirname, './public/notes.html'));
@@ -42,7 +39,7 @@ app.get('/api/notes', function(req, res) {
 //------if no title------------------------
 app.post('/note', function(req, res) {
   if(!req.body.title) {
-    return res.json({error: "Missing required title"});
+    return res.json({error: "Missing Title!"});
   }
 
 //-----------post api note------------------------
@@ -55,9 +52,6 @@ app.delete('api/notes/:id', function(req, res) {
   //----??????????????????
 })
 
-// edit a single note
-// delete a single note
-// app.delete('/note/'), function(req, res)
 
 
   // Copy request body and generate ID
