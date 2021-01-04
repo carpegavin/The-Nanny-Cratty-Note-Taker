@@ -12,7 +12,7 @@ https://the-nanny-cratty-note-taker.herokuapp.com/)
 ### GNU License
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-![screengrab](https://github.com/carpegavin/The-Nanny-Cratty-Note-Taker/blob/main/Develop/public/assets/img/Screenshot%202021-01-04%20165859.jpg?raw=true)
+![screengrab](https://github.com/carpegavin/The-Nanny-Cratty-Note-Taker/blob/main/Develop/public/assets/img/gif.gif?raw=true)
 
 ### Questions?
 
